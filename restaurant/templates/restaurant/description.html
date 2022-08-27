@@ -1,0 +1,30 @@
+{% block content %}
+<style>
+  .font {
+    font-family: Arial;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .item {
+    width: 259px;
+    height: 194px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+</style>
+<head>
+  <title>description</title>
+</head>
+<body>
+  {% load static %}
+
+  <div class="font">
+    {{food.name}}<br />
+    <br />
+    <img class="item" src="{% static food.image %}" alt="My image" /> <br />
+    {{food.description}}
+  </div>
+</body>
+
+{% endblock %}
