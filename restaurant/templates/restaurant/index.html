@@ -92,44 +92,7 @@
     {% endfor %}
   </div>
   
-                    {% comment %} <div>
-                        <div class="row">
-                          <div class="name">
-                            {{ item.name }}
-                          </div>
-                            <img class="item" src="{% static item.image %}" alt="My image">
-                            <div class="price">
-                              {{item.price}} $
-                        </div>
-                        <div>
-                          {% if perms.auth.delete_user %}
-                            <form action="item/delete/{{item.id}}/" method="POST">
-                                {% csrf_token %}
-                                <button type="submit" class="red-button" >Delete</button>
-                            </form>
-                          {% endif %}
-                          <div>
-                            <a href="{% url 'description' id=item.id %}" class="btn btn-1">
-                            <button type="button" class="btn btn-2">Description</button>
-                            </a>
-                          </div>
-
-                          {% if perms.auth.delete_user %}
-                            <div>
-                              <a href="{% url 'form' id=item.id %}" class="btn btn-1">
-                              <button type="button" class="btn btn-2">Update</button>
-                            </div>
-                          {% endif %}
-
-                
-                          </div>
-                        </div>
-                    </div>
-                
-                {% empty %}
-                <p>There are no to-do items in the list.</p>
-                {% endfor %} {% endcomment %}
-
+                    
 {% endblock %}
 <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
