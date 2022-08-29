@@ -18,7 +18,7 @@
     margin-top:0px;
  }
 
- .koft {
+ .userstyle {
   text-align: right;
  }
 
@@ -35,10 +35,10 @@
 
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
-  <p class="koft"><a  href="{% url 'logout' %}" >Log Out</a></p>
+  <p class="userstyle"><a  href="{% url 'logout' %}" >Log Out</a></p>
 {% else %}
-  <p class="koft">You are not logged in</p>
-  <p class="koft"><a href="{% url 'login' %}">Log In</a></p>
+  <p class="userstyle">You are not logged in</p>
+  <p class="userstyle"><a href="{% url 'login' %}">Log In</a></p>
 {% endif %}
 {% if user.is_staff %}
   <h5 class="button-box col-lg-12" >Add New Item</h5>
